@@ -1,10 +1,77 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>index.html</title>
-</head>
-<body>
 
+<head>
+    <title>Psychic Game</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+<header>
+    <h2><strong>The Psychic Game</strong></h2>
+</header>
+
+<body>
+    <div id="psychic">
+        <p> Guess what letter I'm thinking </p>
+    </div>
+
+    <script type="text/javascript">
+    /*app randomly picks a letter 
+    user has to guess which letter was chosen 
+    display instructions, scores
+    increase scores as needed
+    reset game when declared a winner
+    */
+
+    var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
+        var wins=0;
+        var losses=0;
+        var guessLeft;
+        var guessFar = [];
+
+        
+        document.onkeyup=function(){
+            var userGuess=String.fromCharCode(event.KeyCode).toLowerCase(); 
+
+            var computerGuess
+             = alphabet[Math.floor(Math.random() * alphabet.length)]; 
+
+                //if_else statement for the wins & losses
+                 if(userGuess==computerGuess){
+                    wins++;
+                    alert("Winner!");
+
+                } else 
+                    losses++;
+                    alert("Sorry wrong guess, please try again"); 
+
+               /*  //function to display guesses so far
+               function guessesFar () {
+                guessFar.push(userGuess);
+                
+               }
+
+
+               //for loop for the guesses left
+               for (var guessLeft = 9; guessLeft < 10; guessLeft--){
+               }
+             */
+             
+            var html= "<p>Press any letter to start playing</p>" + 
+                "<p>Wins: " + wins + "</p>" +
+                "<p>Losses: " + losses + "</p>" +
+                "<p>Guesses left: " + guessLeft + "</p>" +
+                "<p>Your guesses so far: " + guessFar + "</p>";
+
+        document.querySelector("#psychic").innerHTML = html;
+            
+            }
+            
+    </script>
 
 </body>
+
 </html>

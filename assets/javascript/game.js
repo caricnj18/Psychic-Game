@@ -1,1 +1,2 @@
-//Use the src attribute of the script tag to link to this file, rather than embedding the code directly in your HTML document.
+//I tired to copy an dput code into javascript file but it doesnt open.
+
