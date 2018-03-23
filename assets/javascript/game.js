@@ -1,11 +1,4 @@
-//I tired to copy an dput code into javascript file but it doesnt open.
-
-    /*app randomly picks a letter 
-    user has to guess which letter was chosen 
-    display instructions, scores
-    increase scores as needed
-    reset game when declared a winner
-    */
+//global variables
 
    var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
